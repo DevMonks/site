@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://devmonks.net/</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://devmonks.net/Impressum</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>http://devmonks.net/Projekte</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>http://devmonks.net/Team</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>http://devmonks.net/Kontakt</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://devmonks.net/Projekte/Grafix-js</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>http://devmonks.net/Projekte/Gamix-js</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>http://devmonks.net/Projekte/Der-Rework</loc>
+  <lastmod>2013-08-03T21:34:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+</urlset>
