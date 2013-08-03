@@ -1,0 +1,141 @@
+doctype 5
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title= title
+
+    //- General meta
+    meta(name='description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen für Desktop- und Mobilgeräte auf Basis von aktuellen Technologien und Techniken')
+    meta(name='keywords', content='software entwicklung,software programmierung,programmierung,entwicklung,design,logo,flyer,corporate identify,development,devmonks,berlin')
+    meta(name='robots', content='index, follow')
+    meta(name='robots', content='noodp')
+    
+
+    //- OpenGraph Meta
+    meta(property='og:title', content='DevMonks Software Programmierung')
+    meta(property='og:type', content='website')
+    meta(property='og:image', content='http://devmonks.net/images/icon-small.png')
+    meta(property='og:url', content='http://devmonks.net')
+    meta(property='og:description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen für Desktop- und Mobilgeräte auf Basis von aktuellen Technologien und Techniken')
+
+    //- Twitter Meta
+    meta(name='twitter:title', content='DevMonks Software Programmierung')
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:url', content='http://devmonks.net')
+    meta(name='twitter:description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen für Desktop- und Mobilgeräte auf Basis von aktuellen Technologien und Techniken')
+    meta(name='twitter:image', content='//devmonks.net/images/icon-small.png')
+    
+    //- Google Meta
+    meta(name='google-site-verification', content='8oyT4Ko_abS9P-IiEnu5Nb0lPaGf4_I0u_1UTbrr_mw')
+
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-glyphicons.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel='icon', href='/images/icon.png')
+    link(rel='shortcut icon', href='/images/icon.ico')
+
+  body(itemscope, itemtype='http://schema.org/LocalBusiness')
+    
+    div.grid.body
+
+        header.header
+            div.inner
+
+                a.logo(href='/')
+                    img(src='/images/logo.png')
+
+                nav.nav-social
+                    ul.nav.nav-horizontal.nav-pills
+                        //- li: a.social.social-rss(href='#')
+                        li: a.social.social-google(href='https://plus.google.com/104806997327421465766', target='_blank', title='DevMonks auf Google Plus')
+                        li: a.social.social-twitter(href='https://twitter.com/DevMonks', target='_blank', title='DevMonks auf Twitter')
+                        li: a.social.social-facebook(href='https://de-de.facebook.com/pages/DevMonks/396312933758854', target='_blank', title='DevMonks auf Facebook')
+                        li: a(href='/Impressum', class=active && active === 'imprint' ? 'active' : false) Impressum
+
+                nav.nav-main
+                    ul.nav.nav-horizontal.nav-pills
+                        li: a(href='/', class=active && active === 'home' ? 'active' : false, title='Zur Startseite') Home
+                        li: a(href='/Projekte', class=active && active === 'projects' ? 'active' : false, title='Unsere Projekte') Projekte
+                        li: a(href='/Team', class=active && active === 'team' ? 'active' : false, title='Das DevMonks Team') Team
+                        li: a(href='/Kontakt', class=active && active === 'contact' ? 'active' : false, title='Kontaktaufnahme') Kontakt
+
+                        block nav-main
+                
+                div.shadow
+
+                block header
+                
+
+        section.page
+            
+            a(name='top')
+            section.content
+
+                
+                header.banner
+                    div#banner.carousel.slide
+
+                        //-ol.carousel-indicators
+                        //-    li.active(data-target='#banner', data-slide-to='0')
+                        //-    li(data-target='#banner', data-slide-to='1')
+                        //-    li(data-target='#banner', data-slide-to='2')
+
+                        div.carousel-inner
+
+                            div.item.active
+                                img(src='/images/slide-background-1.png')
+                                div.overlay
+                                div.carousel-caption
+                                    h5.hidden-sm(style='line-height: 30px') Visualisierungen und Animationen im Web.
+                                    h5.hidden-sm(style='padding-left: 5%; line-height: 30px') Ob Tablet, Smartphone, Desktop-PC oder Toaster.
+                                    h1(style='padding-left: 10%; line-height: 60px; font-size: 60px') Grafix.js
+
+                                    a.btn-more(href='/Projekte/Grafix-js', title='Mehr über Grafix.js') Mehr erfahren
+
+                            //-div.item
+                            //-    img(src='/images/slide-background-1.png')
+                            //-    div.overlay
+                            //-    div.carousel-caption
+                            //-        h1 Caption
+                            //-        p Content
+
+                            //-div.item
+                            //-    img(src='/images/slide-background-1.png')
+                            //-    div.overlay
+                            //-    div.carousel-caption
+                            //-        h1 Caption
+                            //-        p Content
+
+                        //-a.left.carousel-control(data-target='#banner', data-slide='prev'): span.icon-prev
+                        //-a.right.carousel-control(data-target='#banner', data-slide='next'): span.icon-next
+
+                section.main-content.fade
+                    block content
+
+        footer.footer
+            div.row
+                div.col-12.col-lg-6.col-md-12.col-sm-12
+                    div.copyright
+                        &copy; DevMonks, Inh. Cagatay Ulubay
+
+                div.col-12.col-lg-6.col-md-12.col-sm-12
+                    nav.nav-footer
+                        ul.nav.nav-horizontal.nav-pills.pull-right
+                            li: a(href='/', class=active && active === 'home' ? 'active' : false, title='Zur Startseite') Home
+                            li: a(href='/Projekte', class=active && active === 'projects' ? 'active' : false, title='Unsere Projekte') Projekte
+                            li: a(href='/Team', class=active && active === 'team' ? 'active' : false, title='Das DevMonks Team') Team
+                            li: a(href='/Kontakt', class=active && active === 'contact' ? 'active' : false, title='Kontaktaufnahme') Kontakt
+                            li: a(href='#Top') Nach oben
+                    
+            
+
+
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/js/bootstrap.min.js')
+    script(src='/javascripts/fx.js')

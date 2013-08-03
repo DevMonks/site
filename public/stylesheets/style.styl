@@ -1,0 +1,421 @@
+body, html
+    width 100%
+    height 100%
+    padding 0
+    margin 0
+
+body, h1, h2, h3, h4, h5, h6, p, a
+    font-family OpenSans, Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+
+body, p, a
+    font-size 12px
+
+img
+    border 0
+
+a
+    color #333
+
+
+
+a:hover
+    text-decoration none    
+    color #ccc
+
+h1, h2, h3, h4, h5, h6
+    padding 0
+    margin 0
+    
+
+border-radius()
+    -webkit-border-radius arguments
+    -moz-border-radius arguments
+    -ms-border-radius arguments
+    -o-border-radius arguments
+    border-radius arguments
+
+transition()
+    -webkit-transition arguments
+    -moz-transition arguments
+    -ms-transition arguments
+    -o-transition arguments
+    transition arguments
+
+text-shadow()
+    -webkit-text-shadow arguments
+    -moz-text-shadow arguments
+    -ms-text-shadow arguments
+    -o-text-shadow arguments
+    text-shadow arguments
+
+box-shadow()
+    -webkit-box-shadow arguments
+    -moz-box-shadow arguments
+    -ms-box-shadow arguments
+    -o-box-shadow arguments
+    box-shadow arguments
+
+box-sizing()
+    -webkit-box-sizing arguments
+    -moz-box-sizing arguments
+    -ms-box-sizing arguments
+    -o-box-sizing arguments
+    box-sizing arguments
+
+linear-gradient-h( from, to )
+    background -webkit-linear-gradient( from 0%, to 100% )
+    background -moz-linear-gradient( from 0%, to 100% )
+    background -ms-linear-gradient( from 0%, to 100% )
+    background -o-linear-gradient( from 0%, to 100% )
+    background linear-gradient( from 0%, to 100% )
+    
+linear-gradient-h-half( from, to )
+    background -webkit-linear-gradient( from 0%, to 50% )
+    background -moz-linear-gradient( from 0%, to 50% )
+    background -ms-linear-gradient( from 0%, to 50% )
+    background -o-linear-gradient( from 0%, to 50% )
+    background linear-gradient( from 0%, to 50% )
+
+input, textarea, button
+    border-radius( 0, !important )
+
+textarea
+    min-height 200px
+
+button
+    transition( all, .4s, ease-out )
+
+button:hover, button.active
+    background #004C66
+
+.btn, .alert
+    border-radius( 0, !important )
+
+
+.inner
+    width 100%
+    height 100%
+    position relative
+
+
+.body
+    max-width 940px
+    margin 0px auto
+
+
+.header
+    height 120px
+    position fixed
+    max-width 940px
+    width 100%
+    top 0
+    z-index 100
+    background #fff
+
+    .logo
+        position absolute
+        left 0
+        top 31px
+
+        img
+            width 100%
+            height auto
+            
+    .nav-social
+        position absolute
+        top 0
+        right 0
+
+        ul li a
+            height 40px
+            border-radius( 0 )
+            transition( all, 0.4s, ease-out )
+            background-color #ddd
+            color #888
+            padding 0px 20px 0px 20px
+            line-height 40px
+
+            &:hover, &.active
+                background-color #ccc
+
+            &.social
+                width 40px
+                background url('/images/social-icons.png') no-repeat
+                background-color #ddd
+                
+                &.social-facebook
+                    
+                    &:hover, &.active
+                        background-color #3B5A9B
+                &.social-twitter
+                    background-position -40px 0px
+
+                    &:hover, &.active
+                        background-color #67ADD1
+                &.social-google
+                    background-position -40px -40px
+
+                    &:hover, &.active
+                        background-color #DA5048
+                &.social-rss
+                    background-position 0px -40px
+
+                    &:hover, &.active
+                        background-color #FB9E3A
+
+    .nav-main
+        position absolute
+        bottom 0
+        right 0
+        
+        ul li a
+            width 120px
+            height 40px
+            line-height 40px
+            color #aaa
+            text-align center
+            padding 0
+            border-radius( 0 )
+            border-bottom 6px solid #ccc
+            font-size 18px
+            transition( all, 0.2s, ease-out )
+            text-shadow( 1px, 1px, 2px, rgba( 0, 0, 0, .1 ) )
+
+            &:hover, &.active
+                color #00516D
+                background none
+                border-bottom-color #BDEFFF
+                line-height 35px
+
+    .shadow
+        height 12px
+        linear-gradient-h-half( rgba( 0, 0, 0, .2 ), rgba( 0, 0, 0, 0 ) )
+        position absolute
+        bottom -12px
+        left 0
+        right 0
+        
+                    
+
+.page
+    margin-top 120px
+
+
+.teasers
+    div.col-12
+        overflow hidden
+
+    .inner > a
+        display block
+        box-sizing( border-box )
+        border 1px solid #ccc
+        color #333
+        padding 20px
+        height 350px
+        margin-top 20px
+        transition( all, 0.4s, ease-out )
+
+        h1, h2, h3, h4, h5, h6
+            text-shadow( 1px, 1px, 2px, rgba( 0, 0, 0, .2 ) )
+        
+        &:hover, &.active
+            border-color #004C66
+        
+        &.inactive
+            color #ccc
+        p
+            padding: 10px
+            text-align justify
+    .title
+        position absolute
+        bottom -50px
+        left 0
+        right 0
+        height 50px
+        line-height 40px
+        padding-left 10px
+        background #004C66
+        color #fff
+        transition( bottom, 0.2s, cubic-bezier(.95,.79,.59,1.31) )
+        font-size 14px
+
+        a
+            display block
+            color #fff
+            text-shadow( 1px, 1px, 4px, rgba( 0, 0, 0, .2 ) )
+            transition( color, .4s, ease-out )
+
+            &:hover, a.active
+                color #BDEFFF
+            
+
+        &.active
+            bottom -10px
+    &.projects
+        .inner > a.inactive
+            img
+                opacity 0.4
+        img
+            width 100%
+            height auto
+            margin-top 20px
+            margin-bottom 20px
+            transition( opacity, 0.4s, ease-out )
+        a
+            height auto
+
+.carousel 
+    .overlay
+        width 100%
+        height 100%
+        linear-gradient-h-half( rgba( 0, 0, 0, .8 ), rgba( 0, 0, 0, 0 ) )
+        opacity 1
+        position absolute
+        top 0
+        left 0
+        bottom 0
+        right 0
+        transition( opacity, 0.4s, ease-out )
+        z-index 50
+    
+    &:hover .overlay, &.active .overlay, .overlay.active
+        opacity 0.5
+        
+        
+    .carousel-caption
+        font-family OpenSans, Helvetica Neue, Helvetica, Verdana, Arial, sans-serif
+        top 10%
+        left 10%
+        right auto
+        bottom auto
+        text-align left
+        width 90%
+        height 90%
+        z-index 60
+
+        h1, h2, h3, h4, h5, h6, p
+            text-shadow( 1px, 1px, 4px, rgba( 0, 0, 0, .4 ) )
+
+        a.btn-more
+            display block
+            position absolute
+            bottom 20%
+            right 20%
+            height 40px
+            line-height 40px
+            background rgba( 255, 255, 255, .4 )
+            padding 0 30px 0 30px
+            cursor pointer
+            font-size 14px
+            color #fff
+            transition( background, 0.4s, ease-out )
+            
+            &:hover, &.active
+                background: rgba( 255, 255, 255, .8 )
+            
+        
+    .carousel-control
+        top 50%
+        bottom auto
+        height 100px
+        width 40px
+        background #fff !important
+        opacity 0.3
+        margin-top -50px
+        transition( all, 0.4s, ease-out )
+        cursor pointer
+        z-index 70
+
+        &:hover, &.active
+            opacity 0.6
+
+        span
+            font-size 30px !important
+            line-height 30px
+            color #333
+
+.panel
+    margin-top 20px
+    border-radius( 0 )
+    border-color #ddd
+
+    h1, h2, h3, h4, h5, h6, legend
+        padding-top 20px
+        padding-bottom 20px
+        text-shadow( 1px, 1px, 4px, rgba( 0, 0, 0, .2 ) )
+
+        .glyphicon
+            font-size 30px
+            margin-right 20px
+
+    p
+        font-size 14px
+        padding 0px 20px 0px 20px
+        text-align justify
+
+.alert
+    margin-top 20px
+
+.footer
+    background #004C66
+    margin-top 20px
+
+    .copyright
+        line-height 80px
+        font-size 12px
+        color #fff
+        padding-left 20px
+
+    .nav-footer
+        padding-right 20px
+
+        ul
+            margin-top 24px
+
+        ul li a
+            border-radius( 0 )
+            background none
+            color #fff
+            transition( all, 0.4s, ease-out )
+
+            &:hover, &.active
+                background none
+                color #BDEFFF
+
+
+@media all and (max-width: 940px)
+    .header
+        .logo
+            left 20px
+
+    .panel
+        margin-top 0
+        padding 20px
+        
+        
+
+@media all and (max-width: 768px)
+    .page
+        margin-top 160px
+
+    .header
+        height 160px
+        
+        .logo
+            top 51px
+
+@media all and (max-width: 610px)
+    .carousel
+        .carousel-caption
+            h1
+                padding-left 5% !important
+                font-size 40px !important
+            a.btn-more
+                bottom auto
+                top 10%
+
+
+@media all and (max-width: 500px)
+    .header
+        .nav-main ul li a
+            width 80px

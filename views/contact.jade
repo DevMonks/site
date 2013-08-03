@@ -1,0 +1,54 @@
+extends layout
+
+block content
+
+    if !errors && !success
+        div.panel
+
+            h2 Kontakt
+
+            p.
+                Was auch immer es ist, zögere nicht! Gerne nehmen wir uns die Zeit, dein Anliegen zu bearbeiten und dich anschließend zu kontaktieren.
+                Dies erfordert allerdings, dass wir zumindest eine E-Mail Adresse bekommen, an die wir antworten können.
+
+            p.
+                Füll einfach das Formular unten aus und sende es ab, eine Antwort sollte innerhalb der nächsten 12-24 Stunden erfolgen.
+    if errors
+            
+        div.alert.alert-error
+            h2 Fehler
+            br
+            p Da ist wohl etwas schief gelaufen. Versuche es doch einfach noch einmal.
+            br
+            ul
+                each error in errors
+                    li= error.msg
+
+    if success
+
+        div.alert.alert-success
+
+                h2 Wunderbar!
+                br
+                strong Die Kontaktfrage wurde uns übermittelt und wir werden uns so schnell wie möglich um dein Anliegen kümmern.
+                br
+                br
+                p: a.btn.btn-success(href='/', title='Zurück zur Startseite') Zur Startseite
+
+    unless success
+        div.panel
+            fieldset
+                legend Kontaktformular
+
+                form(action='/Kontakt', method='post')
+
+                    div.form-group
+                        label.control-label E-Mail
+                        input.form-control(type='email', name='email', required, value=email)
+
+                    div.form-group
+                        label.control-label Nachricht
+                        textarea.form-control(name='message', required)= message
+
+                    button.btn(type='submit') Anfrage senden
+        

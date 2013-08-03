@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+
+    div.panel
+
+        h2 Der Rework
+
+        p Das Redesign der DevMonks Website spiegelt die Einstellung unserer Arbeit wieder. Performanter und professioneller Code gebündelt mit minimalistischen, dynamischen Designs um den User an das zu bringen, was wirklich wichtig ist: <strong>Information</strong>.
+
+        p Dies ist die erste von uns produzierte, online präsentierte Website, die auf einer <a href="http://nodejs.org/" target="_blank" title="Node.js Plattform">Node.js</a> Basis arbeitet. Lediglich ein Wegweiser, um uns dem Ziel näher zu bringen: <strong>Ein performantes Web</strong>.
+
+        h3 Node.js
+
+        p <a href="http://nodejs.org/" target="_blank" title="Node.js Plattform">Node.js</a> ist eine Technologie, die auf Google's JavaScript Engine <a href="http://de.wikipedia.org/wiki/V8_(JavaScript-Implementierung)" target="_blank" title="Google's V8 JavaScript Engine">V8</a> basiert. Sie erlaubt die Erstellung von Web- und Desktopanwendungen in purem JavaScript.
+
+        p Natürlich ist es bereits ein großer Vorteil, dass damit sowohl im Frontend, als auch im Backend ein und dieselbe Sprache herrscht, allerdings gibt es noch einen anderen, großen Vorteil: <strong>Performance</strong>
+
+        p Schalte einige Seiten um und sieh selbst, wie schnell sie aufgebaut sind. Dies wurde nicht durch eine AJAX-Basis ermöglicht, sondern durch ganz normale HTTP Requests und einem Node.js Backend.
+        
+        h3 Meta-Daten
+            
+        p
+            ul
+                li Der Webserver wird durch Express bereitgestellt
+                li Für die vereinfachte Anpassung wurde <a href="http://learnboost.github.io/stylus/" target="_blank" title="Stylus CSS Engine">Stylus</a> als CSS- und <a href="http://jade-lang.com/" target="_blank" title="Jade Template Engine">Jade</a> als HTML-Engine gewählt.
+                li Als Font wurde grundsätzlich <a href="http://www.google.com/fonts/specimen/Open+Sans" target="_blank" title="Google's Open Sans Font">Google's Open Sans</a> verwendet
+                li Das CSS Framework <a href="http://getbootstrap.com/" target="_blank" title="Twitter's Bootstrap 3">Bootstrap 3</a> von Twitter und einige, wenige Media Queries sorgen für das responsive Design
+                li Die meisten Abhängigkeiten werden aus <a href="http://de.wikipedia.org/wiki/Content_Delivery_Network" target="_blank" title="Content Delivery Network auf Wikipedia">CDN</a>s geladen meist <a href="http://cdnjs.com/" target="_blank" title="cdnjs Content Delivery Network">cdnjs</a>
+                li Die gesamte Dauer der Umsetzung dieser Seite betrug in etwa 2 Tage
+
+        h3 Der Source Code
+
+        p Der Source Code dieser Seite ist ziemlich einfach gehalten, die einzelnen Unterseiten sind grundsätzlich einfache Jade-Templates, die ein globales Layout erweitern.
+
+        p Durch Jade lässt sich das HTML sehr simpel anpassen. Ein CMS wäre in diesem Fall pures Bloating gewesen.
+
+        p
+            a.btn.btn-success.btn-large(href='https://github.com/DevMonks/site/archive/master.zip', title='Source Code der DevMonks Seite herunterladen') Zip Download
+            a.btn.btn-primary.btn-large(href='https://github.com/DevMonks/site', target='_blank', title='Die DevMonks Seite auf GitHub') Auf GitHub ansehen
+            
+
+        
