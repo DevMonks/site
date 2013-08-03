@@ -139,3 +139,16 @@ html
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/js/bootstrap.min.js')
     script(src='/javascripts/fx.js')
+    script.
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39630238-2']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['b._setAccount', 'UA-38095399-1']);
+        _gaq.push(['b._trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
