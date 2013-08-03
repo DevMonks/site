@@ -7,7 +7,7 @@ html
     title= title
 
     //- General meta
-    meta(name='description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen für Desktop- und Mobilgeräte auf Basis von aktuellen Technologien und Techniken')
+    meta(name='description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen fÃ¼r Desktop- und MobilgerÃ¤te auf Basis von aktuellen Technologien und Techniken')
     meta(name='keywords', content='software entwicklung,software programmierung,programmierung,entwicklung,design,logo,flyer,corporate identify,development,devmonks,berlin')
     meta(name='robots', content='index, follow')
     meta(name='robots', content='noodp')
@@ -18,13 +18,13 @@ html
     meta(property='og:type', content='website')
     meta(property='og:image', content='http://devmonks.net/images/icon-small.png')
     meta(property='og:url', content='http://devmonks.net')
-    meta(property='og:description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen für Desktop- und Mobilgeräte auf Basis von aktuellen Technologien und Techniken')
+    meta(property='og:description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen fÃ¼r Desktop- und MobilgerÃ¤te auf Basis von aktuellen Technologien und Techniken')
 
     //- Twitter Meta
     meta(name='twitter:title', content='DevMonks Software Programmierung')
     meta(name='twitter:card', content='summary')
     meta(name='twitter:url', content='http://devmonks.net')
-    meta(name='twitter:description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen für Desktop- und Mobilgeräte auf Basis von aktuellen Technologien und Techniken')
+    meta(name='twitter:description', content='Wir entwickeln und programmieren Software und Webseiten und -anwendungen fÃ¼r Desktop- und MobilgerÃ¤te auf Basis von aktuellen Technologien und Techniken')
     meta(name='twitter:image', content='//devmonks.net/images/icon-small.png')
     
     //- Google Meta
@@ -78,11 +78,11 @@ html
 
                 
                 header.banner
-                    div#banner.carousel.slide
+                    div#banner.carousel.slide(data-interval='6000')
 
-                        //-ol.carousel-indicators
-                        //-    li.active(data-target='#banner', data-slide-to='0')
-                        //-    li(data-target='#banner', data-slide-to='1')
+                        ol.carousel-indicators
+                            li.active(data-target='#banner', data-slide-to='0')
+                            li(data-target='#banner', data-slide-to='1')
                         //-    li(data-target='#banner', data-slide-to='2')
 
                         div.carousel-inner
@@ -95,7 +95,17 @@ html
                                     h5.hidden-sm(style='padding-left: 5%; line-height: 30px') Ob Tablet, Smartphone, Desktop-PC oder Toaster.
                                     h1(style='padding-left: 10%; line-height: 60px; font-size: 60px') Grafix.js
 
-                                    a.btn-more(href='/Projekte/Grafix-js', title='Mehr über Grafix.js') Mehr erfahren
+                                    a.btn-more(href='/Projekte/Grafix-js', title='Mehr Ã¼ber Grafix.js') Mehr erfahren
+
+                            div.item
+                                img(src='/images/slide-background-2.png')
+                                div.overlay
+                                div.carousel-caption
+                                    h5.hidden-sm(style='line-height: 30px') Ein und derselbe Spielstand auf dem Desktop und dem Smartphone?
+                                    h5.hidden-sm(style='padding-left: 5%; line-height: 30px') Web-basierte Spiele machen es möglich!
+                                    h1(style='padding-left: 10%; line-height: 60px; font-size: 60px') Gamix.js
+
+                                    a.btn-more(href='/Projekte/Gamix-js', title='Mehr über Gamix.js') Mehr erfahren
 
                             //-div.item
                             //-    img(src='/images/slide-background-1.png')
@@ -104,15 +114,8 @@ html
                             //-        h1 Caption
                             //-        p Content
 
-                            //-div.item
-                            //-    img(src='/images/slide-background-1.png')
-                            //-    div.overlay
-                            //-    div.carousel-caption
-                            //-        h1 Caption
-                            //-        p Content
-
-                        //-a.left.carousel-control(data-target='#banner', data-slide='prev'): span.icon-prev
-                        //-a.right.carousel-control(data-target='#banner', data-slide='next'): span.icon-next
+                        a.left.carousel-control(data-target='#banner', data-slide='prev'): span.icon-prev
+                        a.right.carousel-control(data-target='#banner', data-slide='next'): span.icon-next
 
                 section.main-content.fade
                     block content
@@ -135,7 +138,7 @@ html
             
 
 
-
+    p Test
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/js/bootstrap.min.js')
     script(src='/javascripts/fx.js')
