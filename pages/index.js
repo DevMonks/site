@@ -54,8 +54,6 @@ module.exports = {
                 text: "Von: " + email + "\n\nNachricht:\n" + message
             }, function( e, response ) {
                 
-                console.log( 'Send contact mail:', e, response );
-                
                 req.contactCache[ ip ] = new Date();
                 res.render( 'contact', {
                     title: 'Anfrage gesendet - DevMonks Software Programmierung',
@@ -69,7 +67,6 @@ module.exports = {
             return;
         }
         
-        console.log( 'Failed validating contact mail:', errors );
         res.render( 'contact', {
             title: 'Kontakt - DevMonks Software Programmierung',
             active: 'contact',
@@ -85,5 +82,34 @@ module.exports = {
             title: 'Impressum - DevMonks Software Programmierung',
             active: 'imprint'
         } );
+    },
+            
+    'cache.manifest': function( req, res ) {
+        
+        res.header( 'Content-Type', 'text/cache-manifest' );
+        
+        var manifest = "CACHE MANIFEST\n"
+                     + "CACHE:\n"
+                     + "/stylesheets/style.css\n"
+                     + "/stylesheets/bootstrap-glyphicons.css\n"
+                     + "/javascripts/fx.js\n"
+                     + "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/css/bootstrap.min.css\n"
+                     + "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800\n"
+                     + "/images/icon.png\n"
+                     + "/images/icon.ico\n"
+                     + "/images/logo.png\n"
+                     + "/images/social-icons.png\n"
+                     + "/images/slide-background-1.png\n"
+                     + "/images/slide-background-2.png\n"
+                     + "/images/projects/devmonks-rework.png\n"
+                     + "/images/projects/gamix.png\n"
+                     + "/images/projects/grafix.png\n"
+                     + "/fonts/glyphiconshalflings-regular.eot\n"
+                     + "/fonts/glyphiconshalflings-regular.otf\n"
+                     + "/fonts/glyphiconshalflings-regular.svg\n"
+                     + "/fonts/glyphiconshalflings-regular.ttf\n"
+                     + "/fonts/glyphiconshalflings-regular.woff\n";
+             
+        res.end( manifest );
     }
 };
