@@ -1,7 +1,6 @@
 
 ( function( jQuery, undefined ) {
     
-    
     function init() {
         
         var $body = $( 'body' ),
@@ -16,7 +15,6 @@
             var on = function( e ) {
                 
                 $teasers.find( 'active' ).removeClass( 'active' );
-                console.log( $( this ), $( this ).next( '.title' ) );
                 $( this ).add( $( this ).next( '.title' ) ).addClass( 'active' );
                 $links.not( '.active' ).addClass( 'inactive' );
             };
@@ -44,19 +42,17 @@
             if( $el.attr( 'href' ) && $el.attr( 'href' )[ 0 ] === '/' ) {
                 e.preventDefault();
                 
-                $mainContent.removeClass( 'in' );
-                window.setTimeout( function() {
+                $mainContent.fadeOut( 'slow', function() {
                     
                     window.location.href = $el.attr( 'href' );
-                }, 1000 * .15 );
+                } );
             }
             
         } );
         
-        
-        $mainContent.addClass( 'in' );
+        $body.removeClass( 'no-js' );
+        $mainContent.fadeIn( 'slow' );
     }
-    
     
     $( init );
     

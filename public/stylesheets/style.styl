@@ -16,8 +16,6 @@ img
 a
     color #333
 
-
-
 a:hover
     text-decoration none    
     color #ccc
@@ -91,12 +89,13 @@ button:hover, button.active
 .btn, .alert
     border-radius( 0, !important )
 
+.no-transition, .no-transition *
+    transition( none, !important )
 
 .inner
     width 100%
     height 100%
     position relative
-
 
 .body
     max-width 940px
@@ -381,6 +380,13 @@ button:hover, button.active
             &:hover, &.active
                 background none
                 color #BDEFFF
+
+.main-content
+    display none
+
+.no-js 
+    .main-content
+        display block
 
 
 @media all and (max-width: 940px)

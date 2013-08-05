@@ -34,9 +34,16 @@ module.exports = {
         req.sanitize( 'message' ).escape();
         
         var email = req.body.email,
-            message = req.body.message;
+            message = req.body.message,
+            ip = req.connection.remoteAddress.toString(),
+            now = new Date();
         
         var errors = req.validationErrors();
+        
+        if( !errors && ip in req.contactCache && now - req.contactCache[ ip ] > ( 2 * 60 * 60 ) ) {
+            
+            errors = [ { msg: 'Du hast uns in den letzten 2 Stunden bereits kontaktiert, bitte warte noch einen Moment' } ];
+        }
         
         if( !errors ) {
             
@@ -49,6 +56,7 @@ module.exports = {
                 
                 console.log( 'Send contact mail:', e, response );
                 
+                req.contactCache[ ip ] = new Date();
                 res.render( 'contact', {
                     title: 'Anfrage gesendet - DevMonks Software Programmierung',
                     active: 'contact',

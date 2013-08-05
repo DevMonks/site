@@ -39,7 +39,7 @@ html
     link(rel='icon', href='/images/icon.png')
     link(rel='shortcut icon', href='/images/icon.ico')
 
-  body(itemscope, itemtype='http://schema.org/LocalBusiness')
+  body(itemscope, itemtype='http://schema.org/LocalBusiness').no-js
     
     div.grid.body
 
@@ -117,23 +117,23 @@ html
                         a.left.carousel-control(data-target='#banner', data-slide='prev'): span.icon-prev
                         a.right.carousel-control(data-target='#banner', data-slide='next'): span.icon-next
 
-                section.main-content.fade
+                section.main-content
                     block content
 
-        footer.footer
-            div.row
-                div.col-12.col-lg-6.col-md-12.col-sm-12
-                    div.copyright
-                        &copy; DevMonks, Inh. Cagatay Ulubay
+                    footer.footer
+                        div.row
+                            div.col-12.col-lg-6.col-md-12.col-sm-12
+                                div.copyright
+                                    &copy; DevMonks, Inh. Cagatay Ulubay
 
-                div.col-12.col-lg-6.col-md-12.col-sm-12
-                    nav.nav-footer
-                        ul.nav.nav-horizontal.nav-pills.pull-right
-                            li: a(href='/', class=active && active === 'home' ? 'active' : false, title='Zur Startseite') Home
-                            li: a(href='/Projekte', class=active && active === 'projects' ? 'active' : false, title='Unsere Projekte') Projekte
-                            li: a(href='/Team', class=active && active === 'team' ? 'active' : false, title='Das DevMonks Team') Team
-                            li: a(href='/Kontakt', class=active && active === 'contact' ? 'active' : false, title='Kontaktaufnahme') Kontakt
-                            li: a(href='#Top') Nach oben
+                            div.col-12.col-lg-6.col-md-12.col-sm-12
+                                nav.nav-footer
+                                    ul.nav.nav-horizontal.nav-pills.pull-right
+                                        li: a(href='/', class=active && active === 'home' ? 'active' : false, title='Zur Startseite') Home
+                                        li: a(href='/Projekte', class=active && active === 'projects' ? 'active' : false, title='Unsere Projekte') Projekte
+                                        li: a(href='/Team', class=active && active === 'team' ? 'active' : false, title='Das DevMonks Team') Team
+                                        li: a(href='/Kontakt', class=active && active === 'contact' ? 'active' : false, title='Kontaktaufnahme') Kontakt
+                                        li: a(href='#Top') Nach oben
                     
             
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')

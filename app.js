@@ -6,7 +6,8 @@ var express = require( 'express' ),
     nodemailer = require( 'nodemailer' ),
     expressBind = require( './lib/express-bind' );
 
-var app = express();
+var app = express(),
+    contactCache = {};
 
 app.bind = expressBind;
 
@@ -31,16 +32,13 @@ app.configure( function() {
     app.use( function( req, res, next ) {
         
         req.mailer = transport;
+        req.contactCache = contactCache;
         
         next();
     } );
     app.use( app.router );
     app.use( express.static( path.join(__dirname, 'public' ) ) );
-    
-    app.use( require( 'stylus' ).middleware( {
-        force: true,
-        src: __dirname + '/public'
-    } ) );
+    app.use( require( 'stylus' ).middleware( path.join( __dirname,  'public' ) ) );
 } );
 
 app.configure( 'development', function() {
