@@ -42,7 +42,7 @@
             if( $el.attr( 'href' ) && $el.attr( 'href' )[ 0 ] === '/' ) {
                 e.preventDefault();
                 
-                $mainContent.fadeOut( 'slow', function() {
+                $mainContent.fadeOut( 'fast', function() {
                     
                     window.location.href = $el.attr( 'href' );
                 } );
@@ -51,7 +51,7 @@
         } );
         
         $body.removeClass( 'no-js' );
-        $mainContent.fadeIn( 'slow' );
+        $mainContent.fadeIn( 'fast' );
     }
     
     $( init );
