@@ -201,6 +201,7 @@ button:hover, button.active
 
 
 .teasers
+
     div.col-12
         overflow hidden
 
@@ -210,7 +211,7 @@ button:hover, button.active
         border 1px solid #ccc
         color #333
         padding 20px
-        height 350px
+        height 320px
         margin-top 20px
         transition( all, 0.4s, ease-out )
 
@@ -225,6 +226,7 @@ button:hover, button.active
         p
             padding: 10px
             text-align justify
+
     .title
         position absolute
         bottom -50px
@@ -394,10 +396,18 @@ button:hover, button.active
         .logo
             left 20px
 
-    .panel
-        margin-top 0
+    .teasers 
+        .inner > a
+            height 500px
+
+
+    .content
         padding 20px
-        
+     
+@media all and (min-width: 860px)
+
+    .teasers .inner > a
+        height 400px   
         
 
 @media all and (max-width: 768px)
@@ -409,6 +419,12 @@ button:hover, button.active
         
         .logo
             top 51px
+
+    .teasers .inner > a
+        height auto
+        
+
+    
 
 @media all and (max-width: 610px)
     .carousel
@@ -429,9 +445,6 @@ button:hover, button.active
         .nav-main ul li a
             font-size 16px
             width 70px
-
-    .content
-        padding 10px
 
     #banner
         display none !important
